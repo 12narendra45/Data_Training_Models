@@ -17,7 +17,7 @@ The dataset used in this project, `airline_passenger_satisfaction.csv`, consists
 - **Service Ratings**: Ratings of services such as seat comfort, food, and in-flight entertainment.
 - **Leg Room Service**: Rating of leg room service on the flight.
 - **Satisfaction**: The target variable indicating whether the passenger was "Satisfied" or "Dissatisfied". This was converted to a binary format (1 for "Satisfied", 0 for "Dissatisfied") for model compatibility.
-  -[airline_passengers_satisfication Data](https://github.com/12narendra45/Data_Training_Models/blob/main/airline_passenger_satisfaction.csv)
+-Data Used:[airline_passengers_satisfication Data](https://github.com/12narendra45/Data_Training_Models/blob/main/airline_passenger_satisfaction.csv)
   
 ## Project Overview
 
@@ -70,35 +70,37 @@ The project includes:
 
 ### 1. Naive Bayes
 - **Description**: A probabilistic model based on Bayes' theorem.
-- **Accuracy**: `79%`
+- **Accuracy**: `79.29%`
 
 ### 2. K-Nearest Neighbors (KNN)
 - **Description**: Instance-based learning algorithm.
-- **Accuracy**: `XX%`
+- **Accuracy**: `79.0%`
 
 ### 3. Decision Tree
 - **Description**: A rule-based model for classification.
-- **Accuracy**: `XX%`
-- 
+- **Accuracy**: `85.7%`
+- Tree Plot:![Rplot02](https://github.com/user-attachments/assets/76350021-6715-4274-a912-141eb0adbccd)
+
 
 ### 4. Linear Regression
 - **Description**: Regression model for continuous data.
-- **R-Squared Value**: `XX%`
-- 
+- **R-Squared Value**: `42.8%`
+- ploted image:![Rplot](https://github.com/user-attachments/assets/fe6590d2-ec2b-4a91-9a8c-e044ea0d6174)
+
 
 ### 5. Support Vector Machine (SVM)
 - **Description**: Large-margin classifier.
-- **Accuracy**: `XX%`
+- **Accuracy**: `78.5%`
 
 ### Accuracy Comparison
 The bar plot below compares the accuracies of all models.
-
+![Rplot03](https://github.com/user-attachments/assets/59f99504-21e0-4965-972a-1857dbc64a03)
 
 ---
 
 ## Conclusion
 
-- **Best Performing Model**: Based on the accuracy comparison, the best-performing model is `XYZ Model` with an accuracy of `XX%`.
+- **Best Performing Model**: Based on the accuracy comparison, the best-performing model is Decision Tree  with an accuracy of `85.7%`.
 - **Insights**:
   - Feature engineering and preprocessing significantly affect model performance.
   - Decision Tree and Naive Bayes provide interpretable results, whereas SVM excels in handling high-dimensional data.
@@ -120,6 +122,6 @@ To run this project, ensure you have:
   - `kernlab`
   - `ggplot2`
 
-You can install the required packages by running the `packages.R` script:
-```r
+You can install the required packages by running the following file
+-[pakages File](https://github.com/12narendra45/Data_Training_Models/blob/main/packages.R)
 
