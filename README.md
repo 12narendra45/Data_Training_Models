@@ -17,7 +17,7 @@ The dataset used in this project, `airline_passenger_satisfaction.csv`, consists
 - **Service Ratings**: Ratings of services such as seat comfort, food, and in-flight entertainment.
 - **Leg Room Service**: Rating of leg room service on the flight.
 - **Satisfaction**: The target variable indicating whether the passenger was "Satisfied" or "Dissatisfied". This was converted to a binary format (1 for "Satisfied", 0 for "Dissatisfied") for model compatibility.
-  -[airline_passengers_satisfication Data]((https://github.com/12narendra45/Data_Training_Models/blob/main/airline_passenger_satisfaction.csv))
+  -[airline_passengers_satisfication Data](https://github.com/12narendra45/Data_Training_Models/blob/main/airline_passenger_satisfaction.csv)
   
 ## Project Overview
 
