@@ -1,0 +1,93 @@
+
+# Machine Learning Models Implementation and Explanation
+
+## Data Loading and Preprocessing
+1. **Dataset Loading**:
+   - The dataset `airline_passenger_satisfaction.csv` was loaded using `read.csv`.
+   - `View(data)` allows a quick visual inspection of the data.
+
+2. **Feature Selection**:
+   - Dropped unnecessary columns (`1 to 6`) to focus on relevant features.
+   - Reason: These columns might be identifiers or irrelevant to the model.
+
+3. **Handling Missing Values**:
+   - Checked for missing values using `sum(is.na(data))`.
+   - Replaced missing values with `0` using `data[is.na(data)] <- 0`.
+   - Ensured no missing values remained after replacement.
+
+4. **Data Splitting**:
+   - The dataset was split into training (75%) and testing (25%) using random sampling.
+   - Seed set using `set.seed(123)` for reproducibility.
+
+5. **Target Variable Encoding**:
+   - Converted the `Satisfaction` column to binary values (`Satisfied` -> `1`, otherwise `0`).
+   - Reason: Many models require numerical target variables.
+
+---
+
+## Models and Their Implementation
+
+### 1. **Naive Bayes**
+   - Used the `e1071` package to build the Naive Bayes model.
+   - Predicted satisfaction on test data.
+   - Calculated accuracy as the proportion of correctly predicted labels.
+
+### 2. **K-Nearest Neighbors (KNN)**
+   - Used the `class` package to implement KNN with `k=8`.
+   - Split data into features (without the target variable) and labels.
+   - Calculated accuracy for KNN predictions.
+
+### 3. **Decision Tree**
+   - Used `rpart` for building the decision tree and `rpart.plot` for visualization.
+   - Target variable converted to a factor as required by the algorithm.
+   - Calculated accuracy for test predictions.
+
+### 4. **Linear Regression**
+   - Used `lm` function to fit a linear regression model.
+   - Target variable converted to numeric for compatibility.
+   - Computed the model's `R-squared` value as a measure of fit.
+   - Visualized the relationship between `Flight Distance` and `Satisfaction`.
+
+### 5. **Support Vector Machine (SVM)**
+   - Used the `kernlab` package with a linear kernel (`vanilladot`) to build the SVM model.
+   - Predicted satisfaction and calculated accuracy for test data.
+   - Visualized decision boundaries.
+
+---
+
+## Accuracy Comparison
+- Compared the accuracy of all models using a bar plot (`ggplot2`).
+- Included model names and their respective accuracy percentages.
+- Models were:
+  - **Naive Bayes**
+  - **KNN**
+  - **Decision Tree**
+  - **Linear Regression (R-squared)**
+  - **SVM**
+
+---
+
+## Rationale for Steps Taken
+1. **Feature Selection**:
+   - Irrelevant or identifier columns can introduce noise and reduce model performance.
+
+2. **Missing Value Handling**:
+   - Missing data can cause errors in model training, so replacing them ensures smoother processing.
+
+3. **Encoding Target Variable**:
+   - Many algorithms require numerical or binary target variables.
+
+4. **Model Selection**:
+   - Chose diverse models to explore different learning techniques:
+     - **Naive Bayes**: Probabilistic approach.
+     - **KNN**: Instance-based learning.
+     - **Decision Tree**: Rule-based approach.
+     - **Linear Regression**: Regression analysis.
+     - **SVM**: Large-margin classifier.
+
+5. **Accuracy Comparison**:
+   - Helps identify the best-performing model for this dataset.
+
+---
+
+This process ensures a robust pipeline for training and evaluating machine learning models.
